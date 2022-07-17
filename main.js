@@ -117,7 +117,7 @@ const completeTask = (event) => {
   const taskToComplete = event.target;
   // verify that the task is completed or not
   if (taskToComplete.getAttribute("job") === "incomplete") {
-    // if the targeted task in incomplete map the taskList find the task
+    // if the targeted task in incomplete map the taskList and find the task
     //  in localStorage and mark it as completed and update the localStorage
     taskList.map((task) => {
       if (
@@ -148,7 +148,7 @@ const completeTask = (event) => {
 const removeTask = (event) => {
   // locate the targeted task in the list to remove
   const taskToRemove = event.target;
-  // filter the task list and update the task list in the localStorage
+  // filter the task list and update the task list to the localStorage
   taskList = taskList.filter(function (task) {
     if (task.title.split(" ")[0] + "remove" === taskToRemove.id) {
       return false;
